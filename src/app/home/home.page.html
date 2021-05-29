@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button class="icon-only" (click)="LogOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title> Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+<app-alert-info></app-alert-info>
+<ion-content>
+
+  <div class="container-fluid" style="margin-top: 15px;" >
+
+    
+    <div class="row">
+      <div class="col-12">
+        <button class="form-btn-menu" (click)=" Emergency()" ><i class="fas fa-users"></i>Emergency</button>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+          <button class="form-btn-menu" (click)="FineGeneration()" ><i class="fa fa-plus"></i>Fine Validation</button>
+        </div>
+    </div>
+    
+     
+    
+  </div>
+
+
+
+</ion-content>

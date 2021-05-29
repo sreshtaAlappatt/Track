@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button class="icon-only" (click)="LogOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+ 
+  <div class="contain">
+    <div class="wrap">
+      <ion-input class="input" type="text"  [(ngModel)]="this.a"  placeholder="search"></ion-input>
+    </div>
+    </div>
+    
+  <!-- SAVE and CLEAR Button -->
+  <div class="buttondiv">
+    <button class="btn-grad" (click)="WINDOW()"><i class="fas fa-users"></i>Search</button>
+  </div>
+
+  
+   <ion-card *ngFor="let user of UserList">
+    <ion-card-header>
+      <ion-card-subtitle>PASS REQUESTS</ion-card-subtitle>
+      
+    </ion-card-header>
+  
+    <ion-card-content>
+     
+      <p  style="font-size: 17px;"><b>Vehicle Number :{{user.vehiclenum2}}</b></p>
+      <p style="font-size: 17px;">From :{{user.From2}}</p>
+      <p  style="font-size: 17px;">To :{{user.To2}}</p>
+      <p  style="font-size: 17px;">Reason :{{user.reason}}</p>
+      <p  style="font-size: 17px;">Date :{{user.date}}</p>
+      <p  style="font-size: 17px;">Status :{{user.acpd}}</p>
+      
+    </ion-card-content>
+  </ion-card> 
+  <ion-card *ngFor="let mask of UserList1"> 
+    <ion-card-header>
+      <ion-card-subtitle>Mask Fine</ion-card-subtitle>
+      
+    </ion-card-header>
+  
+    <ion-card-content>
+      
+      <p  style="font-size: 17px;"><b>Vehicle Number :{{mask.vehiclenum2}}</b></p>
+      <p style="font-size: 17px;">Date :{{mask.date}}</p>
+      <p  style="font-size: 17px;">Time :{{mask.time}}</p>
+      
+      
+    </ion-card-content>
+  </ion-card>
+
+  </ion-content>
+

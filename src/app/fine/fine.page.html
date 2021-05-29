@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary">
+      <ion-button class="icon-only" (click)="LogOut()">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>FineLeft</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card *ngFor="let user of UserList">
+  
+    <ion-card-content>
+      <p style="font-size: 17px;"><b>Vehicle Number : {{user.vehiclenum2}}</b></p>
+      <p style="font-size: 17px;">Date : {{user.date}}</p>
+      <p style="font-size: 17px;">Time : {{user.time}}</p>
+      <p style="font-size: 17px;"><b>Fine amount to be paid is INR 2000/-</b></p>
+      
+      
+    </ion-card-content>
+    <ion-footer color="secondary">
+      <!-- <ion-row > -->
+        <ion-col size="6" class="ion-text-center">
+          <ion-button fill="clear" (click)="maskupdate(user.nomask)"  color="black" class="ion-text-capitalize">
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>Paid</div>
+          </ion-button>
+        </ion-col>
+        
+      <!-- </ion-row> -->
+    </ion-footer>
+  </ion-card>
+</ion-content>
+

@@ -1,5 +1,10 @@
 {
   "name": "DemoProject",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {
+      "enabled": false
+    }
+  },
   "type": "angular"
 }
